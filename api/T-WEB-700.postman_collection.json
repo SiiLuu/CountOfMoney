@@ -1,0 +1,1050 @@
+{
+	"info": {
+		"_postman_id": "27b6d047-e42d-4c53-a5c3-4c88dab13b8c",
+		"name": "T-WEB-700",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmYTMyNTZlYjc0MjE5YjE3MWVjZTAiLCJpYXQiOjE2Mzc4NTQyMzZ9.ZOuI_RWPiphQU1EIA-RsAKbe9fWlAP9C3pimlS2DloQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmYTMyNTZlYjc0MjE5YjE3MWVjZTAiLCJpYXQiOjE2Mzc4NTQyMzZ9.ZOuI_RWPiphQU1EIA-RsAKbe9fWlAP9C3pimlS2DloQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "{{testNickname}}",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "{{currency}}",
+									"type": "text"
+								},
+								{
+									"key": "keywords",
+									"value": "[\"bitcoin\", \"ethereum\"]",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmYTMyNTZlYjc0MjE5YjE3MWVjZTAiLCJpYXQiOjE2Mzc4NTQyMzZ9.ZOuI_RWPiphQU1EIA-RsAKbe9fWlAP9C3pimlS2DloQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crypto",
+			"item": [
+				{
+					"name": "Crypto list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/crypto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crypto list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/api/crypto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"crypto"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "653"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28d-9P4boFq7nXwXtJcYJYTvtfacdZA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 07:20:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"cmid\": \"BTC\",\n            \"name\": \"Bitcoin\",\n            \"currentPrice\": 49623,\n            \"openingPrice\": 50520.94,\n            \"lowestPrice\": 49222.5,\n            \"highestPrice\": 50844.86,\n            \"photo\": \"https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg\"\n        },\n        {\n            \"cmid\": \"ETH\",\n            \"name\": \"Ethereum\",\n            \"currentPrice\": 4377,\n            \"openingPrice\": 4440.94,\n            \"lowestPrice\": 4341.32,\n            \"highestPrice\": 4497.7,\n            \"photo\": \"https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/eth.svg\"\n        },\n        {\n            \"cmid\": \"XRP\",\n            \"name\": \"XRP\",\n            \"currentPrice\": 0,\n            \"openingPrice\": 0.86282,\n            \"lowestPrice\": 0.84287,\n            \"highestPrice\": 0.87295,\n            \"photo\": \"https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/XRP.svg\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Crypto Uniq",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/crypto/BTC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto",
+								"BTC"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crypto Uniq",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/api/crypto/BTC",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"crypto",
+										"BTC"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f0-s6iysHhJqOHuAhXU2sQKb+5Rw9s\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 07:25:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"data\": {\n        \"cmid\": \"BTC\",\n        \"name\": \"Bitcoin\",\n        \"currentPrice\": 49785,\n        \"openingPrice\": 50520.94,\n        \"lowestPrice\": 49222.5,\n        \"highestPrice\": 50844.86,\n        \"photo\": \"https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Crypto History",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/crypto/BTC/history/daily",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto",
+								"BTC",
+								"history",
+								"daily"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crypto History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/api/crypto/BTC/history/daily",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"crypto",
+										"BTC",
+										"history",
+										"daily"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4cd6-YhxlCjZ1p8eDmzhIACCvITr+oWs\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Dec 2021 07:27:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"time_period_start\": \"2021-10-11T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-12T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-11T00:00:00.5040000Z\",\n            \"time_close\": \"2021-10-11T23:59:59.6475220Z\",\n            \"price_open\": 54689.61,\n            \"price_high\": 58000,\n            \"price_low\": 54411.54,\n            \"price_close\": 57487.44,\n            \"volume_traded\": 24201.555454956,\n            \"trades_count\": 453932\n        },\n        {\n            \"time_period_start\": \"2021-10-12T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-13T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-12T00:00:00.5990000Z\",\n            \"time_close\": \"2021-10-12T23:59:59.6888760Z\",\n            \"price_open\": 57490.38,\n            \"price_high\": 57722,\n            \"price_low\": 53657,\n            \"price_close\": 56005.1,\n            \"volume_traded\": 30631.984332568,\n            \"trades_count\": 509484\n        },\n        {\n            \"time_period_start\": \"2021-10-13T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-14T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-13T00:00:00.0848240Z\",\n            \"time_close\": \"2021-10-13T23:59:59.9758100Z\",\n            \"price_open\": 56005.1,\n            \"price_high\": 57839,\n            \"price_low\": 54223,\n            \"price_close\": 57367.32,\n            \"volume_traded\": 28464.039563392,\n            \"trades_count\": 511638\n        },\n        {\n            \"time_period_start\": \"2021-10-14T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-15T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-14T00:00:00.2622630Z\",\n            \"time_close\": \"2021-10-14T23:59:59.4575050Z\",\n            \"price_open\": 57367.32,\n            \"price_high\": 58580.4,\n            \"price_low\": 56776.5,\n            \"price_close\": 57359.51,\n            \"volume_traded\": 21584.682147402,\n            \"trades_count\": 461019\n        },\n        {\n            \"time_period_start\": \"2021-10-15T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-16T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-15T00:00:00.1158460Z\",\n            \"time_close\": \"2021-10-15T23:59:59.8305840Z\",\n            \"price_open\": 57359.51,\n            \"price_high\": 62944.94,\n            \"price_low\": 56855.5,\n            \"price_close\": 61695.39,\n            \"volume_traded\": 44622.508536375,\n            \"trades_count\": 846157\n        },\n        {\n            \"time_period_start\": \"2021-10-16T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-17T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-16T00:00:00.1033380Z\",\n            \"time_close\": \"2021-10-16T23:59:58.7460000Z\",\n            \"price_open\": 61690.32,\n            \"price_high\": 62419,\n            \"price_low\": 60100.27,\n            \"price_close\": 60876.5,\n            \"volume_traded\": 17065.134630334,\n            \"trades_count\": 494329\n        },\n        {\n            \"time_period_start\": \"2021-10-17T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-18T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-17T00:00:00.0990380Z\",\n            \"time_close\": \"2021-10-17T23:59:59.7891840Z\",\n            \"price_open\": 60867.05,\n            \"price_high\": 61744.17,\n            \"price_low\": 58900.2,\n            \"price_close\": 61527.11,\n            \"volume_traded\": 16580.734148782,\n            \"trades_count\": 468331\n        },\n        {\n            \"time_period_start\": \"2021-10-18T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-19T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-18T00:00:00.0083230Z\",\n            \"time_close\": \"2021-10-18T23:59:59.9141300Z\",\n            \"price_open\": 61530.07,\n            \"price_high\": 62709.5,\n            \"price_low\": 59013,\n            \"price_close\": 62042.41,\n            \"volume_traded\": 39973.327356195,\n            \"trades_count\": 646276\n        },\n        {\n            \"time_period_start\": \"2021-10-19T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-20T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-19T00:00:00.0436810Z\",\n            \"time_close\": \"2021-10-19T23:59:59.9719680Z\",\n            \"price_open\": 62042.4,\n            \"price_high\": 64547.5,\n            \"price_low\": 61298,\n            \"price_close\": 64303.14,\n            \"volume_traded\": 30991.531731519,\n            \"trades_count\": 632489\n        },\n        {\n            \"time_period_start\": \"2021-10-20T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-21T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-20T00:00:00.1006240Z\",\n            \"time_close\": \"2021-10-20T23:59:59.9250000Z\",\n            \"price_open\": 64303.14,\n            \"price_high\": 67029.999,\n            \"price_low\": 63506,\n            \"price_close\": 66014,\n            \"volume_traded\": 33807.477411323,\n            \"trades_count\": 690005\n        },\n        {\n            \"time_period_start\": \"2021-10-21T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-22T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-21T00:00:00.0262110Z\",\n            \"time_close\": \"2021-10-21T23:59:59.8994940Z\",\n            \"price_open\": 66021.26,\n            \"price_high\": 66683,\n            \"price_low\": 54100,\n            \"price_close\": 62204.02,\n            \"volume_traded\": 41783.597512031,\n            \"trades_count\": 751202\n        },\n        {\n            \"time_period_start\": \"2021-10-22T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-23T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-22T00:00:00.0059180Z\",\n            \"time_close\": \"2021-10-22T23:59:59.8101340Z\",\n            \"price_open\": 62204.01,\n            \"price_high\": 63773,\n            \"price_low\": 59952,\n            \"price_close\": 60687.64,\n            \"volume_traded\": 29926.537471605,\n            \"trades_count\": 608554\n        },\n        {\n            \"time_period_start\": \"2021-10-23T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-24T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-23T00:00:00.0989360Z\",\n            \"time_close\": \"2021-10-23T23:59:59.9110000Z\",\n            \"price_open\": 60682.88,\n            \"price_high\": 61754.5,\n            \"price_low\": 59610.4,\n            \"price_close\": 61296.9,\n            \"volume_traded\": 11706.104769099,\n            \"trades_count\": 377788\n        },\n        {\n            \"time_period_start\": \"2021-10-24T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-25T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-24T00:00:00.6747570Z\",\n            \"time_close\": \"2021-10-24T23:59:59.7352310Z\",\n            \"price_open\": 61300.02,\n            \"price_high\": 61497.33,\n            \"price_low\": 59492.5,\n            \"price_close\": 60854.48,\n            \"volume_traded\": 14090.621864323,\n            \"trades_count\": 464284\n        },\n        {\n            \"time_period_start\": \"2021-10-25T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-26T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-25T00:00:00.0226950Z\",\n            \"time_close\": \"2021-10-25T23:59:59.9377090Z\",\n            \"price_open\": 60847.91,\n            \"price_high\": 63738,\n            \"price_low\": 60624.49,\n            \"price_close\": 63083.54,\n            \"volume_traded\": 19606.299651734,\n            \"trades_count\": 517563\n        },\n        {\n            \"time_period_start\": \"2021-10-26T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-27T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-26T00:00:00.1500620Z\",\n            \"time_close\": \"2021-10-26T23:59:59.8817410Z\",\n            \"price_open\": 63081.96,\n            \"price_high\": 63299.3,\n            \"price_low\": 59824.2,\n            \"price_close\": 60337.62,\n            \"volume_traded\": 21677.630352968,\n            \"trades_count\": 575236\n        },\n        {\n            \"time_period_start\": \"2021-10-27T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-28T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-27T00:00:00.0705320Z\",\n            \"time_close\": \"2021-10-27T23:59:59.8485640Z\",\n            \"price_open\": 60333.19,\n            \"price_high\": 61500,\n            \"price_low\": 57986.02,\n            \"price_close\": 58455.47,\n            \"volume_traded\": 35692.978196886,\n            \"trades_count\": 919663\n        },\n        {\n            \"time_period_start\": \"2021-10-28T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-29T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-28T00:00:00.1003060Z\",\n            \"time_close\": \"2021-10-28T23:59:59.9097400Z\",\n            \"price_open\": 58462.73,\n            \"price_high\": 62531,\n            \"price_low\": 56425,\n            \"price_close\": 60591.65,\n            \"volume_traded\": 37797.822000081,\n            \"trades_count\": 857730\n        },\n        {\n            \"time_period_start\": \"2021-10-29T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-30T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-29T00:00:00.1043370Z\",\n            \"time_close\": \"2021-10-29T23:59:59.7658920Z\",\n            \"price_open\": 60591.63,\n            \"price_high\": 62988.5,\n            \"price_low\": 60154.53,\n            \"price_close\": 62276.72,\n            \"volume_traded\": 28750.930919468,\n            \"trades_count\": 654330\n        },\n        {\n            \"time_period_start\": \"2021-10-30T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-10-31T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-30T00:00:00.0886810Z\",\n            \"time_close\": \"2021-10-30T23:59:59.2827440Z\",\n            \"price_open\": 62287.95,\n            \"price_high\": 62393,\n            \"price_low\": 60660.02,\n            \"price_close\": 61892.41,\n            \"volume_traded\": 12700.302469474,\n            \"trades_count\": 489751\n        },\n        {\n            \"time_period_start\": \"2021-10-31T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-01T00:00:00.0000000Z\",\n            \"time_open\": \"2021-10-31T00:00:00.2363620Z\",\n            \"time_close\": \"2021-10-31T23:59:59.9314760Z\",\n            \"price_open\": 61896.38,\n            \"price_high\": 62487.97,\n            \"price_low\": 59973,\n            \"price_close\": 61343.68,\n            \"volume_traded\": 14747.180976624,\n            \"trades_count\": 448446\n        },\n        {\n            \"time_period_start\": \"2021-11-01T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-02T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-01T00:00:01.0708720Z\",\n            \"time_close\": \"2021-11-01T23:59:59.9832000Z\",\n            \"price_open\": 61346.17,\n            \"price_high\": 62509.5,\n            \"price_low\": 59400,\n            \"price_close\": 60949.54,\n            \"volume_traded\": 24003.870000166,\n            \"trades_count\": 569741\n        },\n        {\n            \"time_period_start\": \"2021-11-02T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-03T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-02T00:00:00.2072390Z\",\n            \"time_close\": \"2021-11-02T23:59:59.6124300Z\",\n            \"price_open\": 60956.4,\n            \"price_high\": 64327,\n            \"price_low\": 60653,\n            \"price_close\": 63266.51,\n            \"volume_traded\": 27583.69013217,\n            \"trades_count\": 650772\n        },\n        {\n            \"time_period_start\": \"2021-11-03T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-04T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-03T00:00:00.1480040Z\",\n            \"time_close\": \"2021-11-03T23:59:59.8788070Z\",\n            \"price_open\": 63266.5,\n            \"price_high\": 63568.36,\n            \"price_low\": 59994,\n            \"price_close\": 62935.41,\n            \"volume_traded\": 21750.425395571,\n            \"trades_count\": 595243\n        },\n        {\n            \"time_period_start\": \"2021-11-04T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-05T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-04T00:00:00.1031050Z\",\n            \"time_close\": \"2021-11-04T23:59:59.9832520Z\",\n            \"price_open\": 62935.4,\n            \"price_high\": 63136.82,\n            \"price_low\": 60644.2,\n            \"price_close\": 61444.5,\n            \"volume_traded\": 18070.571597275,\n            \"trades_count\": 557851\n        },\n        {\n            \"time_period_start\": \"2021-11-05T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-06T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-05T00:00:00.0850780Z\",\n            \"time_close\": \"2021-11-05T23:59:59.8476790Z\",\n            \"price_open\": 61444.49,\n            \"price_high\": 62666.52,\n            \"price_low\": 60769.17,\n            \"price_close\": 61006.15,\n            \"volume_traded\": 15914.520449374,\n            \"trades_count\": 496419\n        },\n        {\n            \"time_period_start\": \"2021-11-06T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-07T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-06T00:00:00.0563050Z\",\n            \"time_close\": \"2021-11-06T23:59:59.9562500Z\",\n            \"price_open\": 61006.14,\n            \"price_high\": 61614,\n            \"price_low\": 60109.91,\n            \"price_close\": 61539.31,\n            \"volume_traded\": 11377.602713051,\n            \"trades_count\": 400088\n        },\n        {\n            \"time_period_start\": \"2021-11-07T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-08T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-07T00:00:00.2570000Z\",\n            \"time_close\": \"2021-11-07T23:59:59.9900000Z\",\n            \"price_open\": 61542.43,\n            \"price_high\": 63346,\n            \"price_low\": 61388,\n            \"price_close\": 63300,\n            \"volume_traded\": 11001.478872776,\n            \"trades_count\": 363850\n        },\n        {\n            \"time_period_start\": \"2021-11-08T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-09T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-08T00:00:00.2100000Z\",\n            \"time_close\": \"2021-11-08T23:59:59.9646170Z\",\n            \"price_open\": 63300,\n            \"price_high\": 67832.5,\n            \"price_low\": 63300,\n            \"price_close\": 67554.84,\n            \"volume_traded\": 29047.61612954,\n            \"trades_count\": 701109\n        },\n        {\n            \"time_period_start\": \"2021-11-09T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-10T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-09T00:00:00.0210630Z\",\n            \"time_close\": \"2021-11-09T23:59:59.9072940Z\",\n            \"price_open\": 67554.13,\n            \"price_high\": 68568.85,\n            \"price_low\": 66250,\n            \"price_close\": 66944.66,\n            \"volume_traded\": 24844.027045142,\n            \"trades_count\": 615080\n        },\n        {\n            \"time_period_start\": \"2021-11-10T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-11T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-10T00:00:00.0442320Z\",\n            \"time_close\": \"2021-11-10T23:59:59.9887890Z\",\n            \"price_open\": 66938.76,\n            \"price_high\": 69060,\n            \"price_low\": 62700.1,\n            \"price_close\": 64912.2,\n            \"volume_traded\": 37283.639932316,\n            \"trades_count\": 754751\n        },\n        {\n            \"time_period_start\": \"2021-11-11T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-12T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-11T00:00:00.0038190Z\",\n            \"time_close\": \"2021-11-11T23:59:59.9985330Z\",\n            \"price_open\": 64912.2,\n            \"price_high\": 65625.44,\n            \"price_low\": 64108.2,\n            \"price_close\": 64807.59,\n            \"volume_traded\": 17595.566680156,\n            \"trades_count\": 515389\n        },\n        {\n            \"time_period_start\": \"2021-11-12T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-13T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-12T00:00:00.0929190Z\",\n            \"time_close\": \"2021-11-12T23:59:58.5755180Z\",\n            \"price_open\": 64807.73,\n            \"price_high\": 65508,\n            \"price_low\": 62294.84,\n            \"price_close\": 64147.9,\n            \"volume_traded\": 26124.749979301,\n            \"trades_count\": 580554\n        },\n        {\n            \"time_period_start\": \"2021-11-13T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-14T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-13T00:00:00.1435510Z\",\n            \"time_close\": \"2021-11-13T23:59:59.1727540Z\",\n            \"price_open\": 64144.42,\n            \"price_high\": 64990,\n            \"price_low\": 63394.17,\n            \"price_close\": 64400.01,\n            \"volume_traded\": 9993.912019426,\n            \"trades_count\": 368434\n        },\n        {\n            \"time_period_start\": \"2021-11-14T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-15T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-14T00:00:00.0230000Z\",\n            \"time_close\": \"2021-11-14T23:59:59.7651270Z\",\n            \"price_open\": 64394.5,\n            \"price_high\": 65534.5,\n            \"price_low\": 63594.5,\n            \"price_close\": 65505.02,\n            \"volume_traded\": 11314.715388688,\n            \"trades_count\": 361698\n        },\n        {\n            \"time_period_start\": \"2021-11-15T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-16T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-15T00:00:00.1389220Z\",\n            \"time_close\": \"2021-11-15T23:59:59.7920000Z\",\n            \"price_open\": 65505.03,\n            \"price_high\": 66387.4,\n            \"price_low\": 63348.91,\n            \"price_close\": 63606.09,\n            \"volume_traded\": 19043.289824609,\n            \"trades_count\": 488073\n        },\n        {\n            \"time_period_start\": \"2021-11-16T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-17T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-16T00:00:00.0711360Z\",\n            \"time_close\": \"2021-11-16T23:59:59.2399770Z\",\n            \"price_open\": 63621.05,\n            \"price_high\": 63628,\n            \"price_low\": 58563,\n            \"price_close\": 60107.98,\n            \"volume_traded\": 46176.958876324,\n            \"trades_count\": 963660\n        },\n        {\n            \"time_period_start\": \"2021-11-17T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-18T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-17T00:00:00.0925430Z\",\n            \"time_close\": \"2021-11-17T23:59:59.4315510Z\",\n            \"price_open\": 60101.56,\n            \"price_high\": 60888.5,\n            \"price_low\": 58380,\n            \"price_close\": 60351.51,\n            \"volume_traded\": 35741.215441589,\n            \"trades_count\": 676937\n        },\n        {\n            \"time_period_start\": \"2021-11-18T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-19T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-18T00:00:00.0999550Z\",\n            \"time_close\": \"2021-11-18T23:59:59.9527090Z\",\n            \"price_open\": 60351.51,\n            \"price_high\": 60987,\n            \"price_low\": 56485,\n            \"price_close\": 56898,\n            \"volume_traded\": 49568.15523256,\n            \"trades_count\": 945673\n        },\n        {\n            \"time_period_start\": \"2021-11-19T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-20T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-19T00:00:00.0244510Z\",\n            \"time_close\": \"2021-11-19T23:59:59.9062140Z\",\n            \"price_open\": 56898.46,\n            \"price_high\": 58412.12,\n            \"price_low\": 55625,\n            \"price_close\": 58122.16,\n            \"volume_traded\": 28464.256668,\n            \"trades_count\": 671770\n        },\n        {\n            \"time_period_start\": \"2021-11-20T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-21T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-20T00:00:00.0312840Z\",\n            \"time_close\": \"2021-11-20T23:59:59.6697440Z\",\n            \"price_open\": 58122.15,\n            \"price_high\": 59900,\n            \"price_low\": 57423.35,\n            \"price_close\": 59760.76,\n            \"volume_traded\": 11788.44461359,\n            \"trades_count\": 452601\n        },\n        {\n            \"time_period_start\": \"2021-11-21T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-22T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-21T00:00:00.7739500Z\",\n            \"time_close\": \"2021-11-21T23:59:59.7309330Z\",\n            \"price_open\": 59760.76,\n            \"price_high\": 60090.55,\n            \"price_low\": 58509.69,\n            \"price_close\": 58671.21,\n            \"volume_traded\": 11275.353069784,\n            \"trades_count\": 404278\n        },\n        {\n            \"time_period_start\": \"2021-11-22T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-23T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-22T00:00:00.0553810Z\",\n            \"time_close\": \"2021-11-22T23:59:59.3668720Z\",\n            \"price_open\": 58671.22,\n            \"price_high\": 59581.52,\n            \"price_low\": 55628.57,\n            \"price_close\": 56280.81,\n            \"volume_traded\": 30439.982335285,\n            \"trades_count\": 704770\n        },\n        {\n            \"time_period_start\": \"2021-11-23T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-24T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-23T00:00:00.2056920Z\",\n            \"time_close\": \"2021-11-23T23:59:59.6548040Z\",\n            \"price_open\": 56280.81,\n            \"price_high\": 57898.5,\n            \"price_low\": 55128.6,\n            \"price_close\": 57566.85,\n            \"volume_traded\": 27753.228421176,\n            \"trades_count\": 679160\n        },\n        {\n            \"time_period_start\": \"2021-11-24T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-25T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-24T00:00:00.6365270Z\",\n            \"time_close\": \"2021-11-24T23:59:59.5437010Z\",\n            \"price_open\": 57562.65,\n            \"price_high\": 57758.5,\n            \"price_low\": 55875.01,\n            \"price_close\": 57162.66,\n            \"volume_traded\": 22471.297614431,\n            \"trades_count\": 531551\n        },\n        {\n            \"time_period_start\": \"2021-11-25T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-26T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-25T00:00:00.1368050Z\",\n            \"time_close\": \"2021-11-25T23:59:59.8970000Z\",\n            \"price_open\": 57158.58,\n            \"price_high\": 59462.5,\n            \"price_low\": 57035,\n            \"price_close\": 58990.14,\n            \"volume_traded\": 18256.89092613,\n            \"trades_count\": 461933\n        },\n        {\n            \"time_period_start\": \"2021-11-26T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-27T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-26T00:00:00.0812510Z\",\n            \"time_close\": \"2021-11-26T23:59:59.9957050Z\",\n            \"price_open\": 58994.72,\n            \"price_high\": 59220,\n            \"price_low\": 53507.015,\n            \"price_close\": 53757.67,\n            \"volume_traded\": 44759.59702775,\n            \"trades_count\": 887535\n        },\n        {\n            \"time_period_start\": \"2021-11-27T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-28T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-27T00:00:00.0027160Z\",\n            \"time_close\": \"2021-11-27T23:59:59.9792670Z\",\n            \"price_open\": 53757.67,\n            \"price_high\": 55382,\n            \"price_low\": 53642.58,\n            \"price_close\": 54759.05,\n            \"volume_traded\": 13996.72894506,\n            \"trades_count\": 433796\n        },\n        {\n            \"time_period_start\": \"2021-11-28T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-29T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-28T00:00:00.3543330Z\",\n            \"time_close\": \"2021-11-28T23:59:59.8507120Z\",\n            \"price_open\": 54759.04,\n            \"price_high\": 57490,\n            \"price_low\": 53300,\n            \"price_close\": 57317.17,\n            \"volume_traded\": 14622.25556641,\n            \"trades_count\": 425551\n        },\n        {\n            \"time_period_start\": \"2021-11-29T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-11-30T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-29T00:00:00.1700350Z\",\n            \"time_close\": \"2021-11-29T23:59:59.9416510Z\",\n            \"price_open\": 57318.51,\n            \"price_high\": 58931.07,\n            \"price_low\": 56730,\n            \"price_close\": 57838.06,\n            \"volume_traded\": 22595.967382439,\n            \"trades_count\": 501043\n        },\n        {\n            \"time_period_start\": \"2021-11-30T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-01T00:00:00.0000000Z\",\n            \"time_open\": \"2021-11-30T00:00:00.0942100Z\",\n            \"time_close\": \"2021-11-30T23:59:59.9948630Z\",\n            \"price_open\": 57838.06,\n            \"price_high\": 59250,\n            \"price_low\": 55910.33,\n            \"price_close\": 56987.97,\n            \"volume_traded\": 32254.307887689,\n            \"trades_count\": 651980\n        },\n        {\n            \"time_period_start\": \"2021-12-01T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-02T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-01T00:00:00.1181550Z\",\n            \"time_close\": \"2021-12-01T23:59:59.8018550Z\",\n            \"price_open\": 56998.35,\n            \"price_high\": 59118.84,\n            \"price_low\": 56465.75,\n            \"price_close\": 57226.5,\n            \"volume_traded\": 27887.09426515,\n            \"trades_count\": 673139\n        },\n        {\n            \"time_period_start\": \"2021-12-02T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-03T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-02T00:00:00.0115490Z\",\n            \"time_close\": \"2021-12-02T23:59:59.6066300Z\",\n            \"price_open\": 57226.51,\n            \"price_high\": 57423.69,\n            \"price_low\": 55837.5,\n            \"price_close\": 56521.46,\n            \"volume_traded\": 25065.39104679,\n            \"trades_count\": 561158\n        },\n        {\n            \"time_period_start\": \"2021-12-03T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-04T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-03T00:00:00.0751430Z\",\n            \"time_close\": \"2021-12-03T23:59:59.9724010Z\",\n            \"price_open\": 56521.45,\n            \"price_high\": 57688.9,\n            \"price_low\": 51409,\n            \"price_close\": 53638.04,\n            \"volume_traded\": 34662.152694279,\n            \"trades_count\": 716428\n        },\n        {\n            \"time_period_start\": \"2021-12-04T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-05T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-04T00:00:00.0939110Z\",\n            \"time_close\": \"2021-12-04T23:59:59.8265350Z\",\n            \"price_open\": 53633.02,\n            \"price_high\": 53893.4,\n            \"price_low\": 40150.1,\n            \"price_close\": 49241.12,\n            \"volume_traded\": 73065.081037806,\n            \"trades_count\": 1445176\n        },\n        {\n            \"time_period_start\": \"2021-12-05T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-06T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-05T00:00:00.0106490Z\",\n            \"time_close\": \"2021-12-05T23:59:59.9787870Z\",\n            \"price_open\": 49235.26,\n            \"price_high\": 49796.5,\n            \"price_low\": 47825.5,\n            \"price_close\": 49484.22,\n            \"volume_traded\": 38049.935975574,\n            \"trades_count\": 805036\n        },\n        {\n            \"time_period_start\": \"2021-12-06T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-07T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-06T00:00:00.2680820Z\",\n            \"time_close\": \"2021-12-06T23:59:59.2270000Z\",\n            \"price_open\": 49484.21,\n            \"price_high\": 51105,\n            \"price_low\": 47111,\n            \"price_close\": 50491.5,\n            \"volume_traded\": 40571.411434275,\n            \"trades_count\": 779257\n        },\n        {\n            \"time_period_start\": \"2021-12-07T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-08T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-07T00:00:00.0726490Z\",\n            \"time_close\": \"2021-12-07T23:59:59.9440000Z\",\n            \"price_open\": 50529.56,\n            \"price_high\": 51995,\n            \"price_low\": 50062.13,\n            \"price_close\": 50650.1,\n            \"volume_traded\": 24423.330022998,\n            \"trades_count\": 539414\n        },\n        {\n            \"time_period_start\": \"2021-12-08T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-09T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-08T00:00:00.1418660Z\",\n            \"time_close\": \"2021-12-08T23:59:59.7439830Z\",\n            \"price_open\": 50625.24,\n            \"price_high\": 51269.82,\n            \"price_low\": 48579.3,\n            \"price_close\": 50519.68,\n            \"volume_traded\": 22447.517360084,\n            \"trades_count\": 479993\n        },\n        {\n            \"time_period_start\": \"2021-12-09T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-10T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-09T00:00:00.1077390Z\",\n            \"time_close\": \"2021-12-09T07:27:41.1127700Z\",\n            \"price_open\": 50520.94,\n            \"price_high\": 50844.86,\n            \"price_low\": 49222.5,\n            \"price_close\": 49608.06,\n            \"volume_traded\": 5510.800973022,\n            \"trades_count\": 149258\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Crypto History With Date",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJpYXQiOjE2Mjc2MzQ4MjUsImV4cCI6MTYzMjgxODgyNX0.w7CP35IjUM4N4b4CBQJVZ3znnKF3g87b8sbk9UPyriY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2021-12-01T00:00:00\",\n    \"endDate\": \"2021-12-05T00:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/crypto/BTC/historyDate/daily",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto",
+								"BTC",
+								"historyDate",
+								"daily"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crypto History With Date",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"startDate\": \"2021-12-01T00:00:00\",\n    \"endDate\": \"2021-12-05T00:00:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/api/crypto/BTC/historyDate/daily",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"crypto",
+										"BTC",
+										"historyDate",
+										"daily"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"541-qkn0/B591w7KrKs3LDF7rpPgybc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Dec 2021 13:45:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"time_period_start\": \"2021-12-01T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-02T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-01T00:00:00.1181550Z\",\n            \"time_close\": \"2021-12-01T23:59:59.8018550Z\",\n            \"price_open\": 56998.35,\n            \"price_high\": 59118.84,\n            \"price_low\": 56465.75,\n            \"price_close\": 57226.5,\n            \"volume_traded\": 27887.09426515,\n            \"trades_count\": 673139\n        },\n        {\n            \"time_period_start\": \"2021-12-02T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-03T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-02T00:00:00.0115490Z\",\n            \"time_close\": \"2021-12-02T23:59:59.6066300Z\",\n            \"price_open\": 57226.51,\n            \"price_high\": 57423.69,\n            \"price_low\": 55837.5,\n            \"price_close\": 56521.46,\n            \"volume_traded\": 25065.39104679,\n            \"trades_count\": 561158\n        },\n        {\n            \"time_period_start\": \"2021-12-03T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-04T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-03T00:00:00.0751430Z\",\n            \"time_close\": \"2021-12-03T23:59:59.9724010Z\",\n            \"price_open\": 56521.45,\n            \"price_high\": 57688.9,\n            \"price_low\": 51409,\n            \"price_close\": 53638.04,\n            \"volume_traded\": 34662.152694279,\n            \"trades_count\": 716428\n        },\n        {\n            \"time_period_start\": \"2021-12-04T00:00:00.0000000Z\",\n            \"time_period_end\": \"2021-12-05T00:00:00.0000000Z\",\n            \"time_open\": \"2021-12-04T00:00:00.0939110Z\",\n            \"time_close\": \"2021-12-04T23:59:59.8265350Z\",\n            \"price_open\": 53633.02,\n            \"price_high\": 53893.4,\n            \"price_low\": 40150.1,\n            \"price_close\": 49241.12,\n            \"volume_traded\": 73065.081037806,\n            \"trades_count\": 1445176\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Crypto add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cmid\": \"XRP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/crypto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crypto favorite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cmid\": \"XRP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/crypto/favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto",
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crypto delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/crypto/XRP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"crypto",
+								"XRP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "email",
+			"value": "test@test.fr"
+		},
+		{
+			"key": "password",
+			"value": "password"
+		},
+		{
+			"key": "nickname",
+			"value": "testNickname"
+		},
+		{
+			"key": "currency",
+			"value": "EUR"
+		}
+	]
+}
